@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.cezary.mashtherm"
+    android:versionCode="1"
+    android:versionName="1.0">
+    <uses-feature android:name="android.hardware.mashtherm" android:required="true"/>
+
+    <uses-feature android:name="android.hardware.mashtherm" android:required="true"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+
+    <application android:label="MashTherm"
+        android:theme="@android:style/Theme.Black">
+        <activity android:name=".DefineMashActivity"
+            android:label="MashTherm" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ControlActivity" android:screenOrientation="portrait"/>
+        <service android:name=".BluetoothLeService" android:enabled="true" android:screenOrientation="portrait"/>
+        <activity android:name=".DeviceScanActivity" android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>
